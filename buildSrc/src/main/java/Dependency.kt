@@ -16,12 +16,6 @@ object Dependency {
         }
     }
 
-    object DataStore {
-        object Preferences {
-            const val IDENTITY = "androidx.datastore:datastore-preferences:${Version.DataStore.IDENTITY}"
-        }
-    }
-
     object Room {
         const val IDENTITY = "androidx.room:room-runtime:${Version.Room.IDENTITY}"
         const val COMPILER = "androidx.room:room-compiler:${Version.Room.IDENTITY}"
