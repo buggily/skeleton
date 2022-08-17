@@ -77,6 +77,10 @@ dependencies {
 
     implementation(Dependency.Retrofit.IDENTITY)
 
+    implementation(Dependency.Compose.ACTIVITY)
+    implementation(Dependency.Compose.MATERIAL)
+    implementation(Dependency.Compose.NAVIGATION)
+
     implementation(Dependency.Compose.Ui.IDENTITY)
     implementation(Dependency.Compose.Ui.Tooling.PREVIEW)
     debugImplementation(Dependency.Compose.Ui.Tooling.IDENTITY)
