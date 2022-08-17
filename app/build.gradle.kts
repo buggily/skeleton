@@ -58,6 +58,7 @@ android {
 
 dependencies {
     implementation(project(":domain"))
+    implementation(Dependency.Kotlin.Core.KTX)
 
     implementation(Dependency.Hilt.IDENTITY)
     kapt(Dependency.Hilt.COMPILER)
@@ -76,11 +77,16 @@ dependencies {
 
     implementation(Dependency.Retrofit.IDENTITY)
 
-    implementation(Dependency.Compose.UI)
-    implementation(Dependency.Compose.ACTIVITY)
-    implementation(Dependency.Compose.VIEW_MODEL)
-    implementation(Dependency.Compose.MATERIAL)
-    implementation(Dependency.Compose.NAVIGATION)
+    implementation(Dependency.Compose.Ui.IDENTITY)
+    implementation(Dependency.Compose.Ui.Tooling.PREVIEW)
+    debugImplementation(Dependency.Compose.Ui.Tooling.IDENTITY)
+
+    implementation(Dependency.Compose.Lifecycle.IDENTITY)
+    implementation(Dependency.Compose.Lifecycle.KTX)
+    implementation(Dependency.Compose.Lifecycle.ViewModel.IDENTITY)
+    implementation(Dependency.Compose.Lifecycle.ViewModel.KTX)
+
+    implementation(Dependency.Coil.IDENTITY)
 }
 
 kapt {
