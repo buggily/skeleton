@@ -1,12 +1,5 @@
 object Dependency {
 
-    object Plugin {
-        object Gradle {
-            const val ANDROID = "com.android.tools.build:gradle:${Version.Plugin.Gradle.ANDROID}"
-            const val HILT = "com.google.dagger:hilt-android-gradle-plugin:${Version.Plugin.Gradle.HILT}"
-        }
-    }
-
     object Hilt {
         const val IDENTITY = "com.google.dagger:hilt-android:${Version.Hilt.IDENTITY}"
         const val COMPILER = "com.google.dagger:hilt-android-compiler:${Version.Hilt.IDENTITY}"
