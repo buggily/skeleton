@@ -14,7 +14,7 @@ fun HomeScreen() {
 
     NavHost(
         navController = navController,
-        startDestination = SkeletonDestination.Default.name,
+        startDestination = SkeletonDestination.Default.route,
         modifier = Modifier.fillMaxSize(),
     ) {
 
