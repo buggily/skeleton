@@ -1,13 +1,14 @@
 plugins {
     id("com.android.application")
 
-    id("kotlin-android")
-    id("kotlin-kapt")
+    kotlin("android")
+    kotlin("kapt")
 
     id("dagger.hilt.android.plugin")
 }
 
 android {
+
     compileSdk = Build.Sdk.COMPILE
 
     defaultConfig {
@@ -57,7 +58,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":domain"))
     implementation(Dependency.Kotlin.Core.KTX)
 
     implementation(Dependency.Hilt.IDENTITY)

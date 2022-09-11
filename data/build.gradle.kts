@@ -1,22 +1,19 @@
 plugins {
-    id("com.android.library")
+    id("java-library")
+    id("org.jetbrains.kotlin.jvm")
 
-    id("kotlin-android")
-    id("kotlin-kapt")
+    kotlin("kapt")
 }
 
-android {
-    compileSdk = Build.Sdk.COMPILE
-
-    defaultConfig {
-        minSdk = Build.Sdk.MIN
-        targetSdk = Build.Sdk.TARGET
-    }
+java {
+    sourceCompatibility = Version.JAVA
+    targetCompatibility = Version.JAVA
 }
 
 dependencies {
-    implementation(Dependency.Hilt.IDENTITY)
-    kapt(Dependency.Hilt.COMPILER)
 
-    implementation(Dependency.Paging.CORE)
+}
+
+kapt {
+    correctErrorTypes = true
 }
