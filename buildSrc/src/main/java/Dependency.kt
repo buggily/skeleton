@@ -8,8 +8,12 @@ object Dependency {
 
     object Hilt {
         const val IDENTITY = "com.google.dagger:hilt-android:${Version.Hilt.IDENTITY}"
-        const val CORE = "com.google.dagger:hilt-core:${Version.Hilt.IDENTITY}"
         const val COMPILER = "com.google.dagger:hilt-android-compiler:${Version.Hilt.IDENTITY}"
+
+        object Core {
+            const val IDENTITY = "com.google.dagger:hilt-core:${Version.Hilt.IDENTITY}"
+            const val COMPILER = "com.google.dagger:hilt-compiler:${Version.Hilt.IDENTITY}"
+        }
 
         object Android {
             const val NAVIGATION = "androidx.hilt:hilt-navigation:${Version.Hilt.ANDROID}"
@@ -32,6 +36,14 @@ object Dependency {
 
     object Retrofit {
         const val IDENTITY = "com.squareup.retrofit2:retrofit:${Version.Retrofit.IDENTITY}"
+
+        const val CONVERTER = "com.jakewharton.retrofit:" +
+                "retrofit2-kotlinx-serialization-converter:" +
+                Version.Retrofit.SERIALIZATION
+    }
+
+    object Serialization {
+        const val IDENTITY = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Version.Serialization.IDENTITY}"
     }
 
     object Compose {

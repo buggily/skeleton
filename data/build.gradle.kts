@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.jvm")
 
     kotlin("kapt")
+    kotlin("plugin.serialization") version "1.7.0"
 }
 
 java {
@@ -11,10 +12,24 @@ java {
 }
 
 dependencies {
-    implementation(Dependency.Hilt.CORE)
-    kapt(Dependency.Hilt.COMPILER)
+    implementation(Dependency.Hilt.Core.IDENTITY)
+    kapt(Dependency.Hilt.Core.COMPILER)
+
+    implementation(Dependency.Retrofit.IDENTITY)
+    implementation(Dependency.Retrofit.CONVERTER)
+    implementation(Dependency.Serialization.IDENTITY)
 }
 
 kapt {
     correctErrorTypes = true
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class).configureEach {
+    val optIns: List<String> = listOf(
+        Build.OptIns.SERIALIZATION,
+    ).map {
+        "-opt-in=$it"
+    }
+
+    kotlinOptions.freeCompilerArgs += optIns
 }

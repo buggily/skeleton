@@ -13,8 +13,8 @@ java {
 dependencies {
     implementation(project(":data"))
 
-    implementation(Dependency.Hilt.CORE)
-    kapt(Dependency.Hilt.COMPILER)
+    implementation(Dependency.Hilt.Core.IDENTITY)
+    kapt(Dependency.Hilt.Core.COMPILER)
 }
 
 kapt {

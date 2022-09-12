@@ -32,6 +32,11 @@ object Version {
 
     object Retrofit {
         const val IDENTITY = "2.9.0"
+        const val SERIALIZATION = "0.8.0"
+    }
+
+    object Serialization {
+        const val IDENTITY = "1.4.0-RC"
     }
 
     object Compose {

@@ -50,6 +50,14 @@ android {
 
     kotlinOptions {
         jvmTarget = Version.JAVA.toString()
+
+        val optIns: List<String> = listOf(
+            String(),
+        ).map {
+            "-opt-in=$it"
+        }
+
+        freeCompilerArgs = freeCompilerArgs + optIns
     }
 
     composeOptions {

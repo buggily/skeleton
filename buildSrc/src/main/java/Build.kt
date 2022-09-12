@@ -8,4 +8,8 @@ object Build {
         const val COMPILE = 33
         const val TARGET = 32
     }
+
+    object OptIns {
+        const val SERIALIZATION = "kotlinx.serialization.ExperimentalSerializationApi"
+    }
 }
