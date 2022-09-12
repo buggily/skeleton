@@ -11,7 +11,8 @@ java {
 }
 
 dependencies {
-
+    implementation(Dependency.Hilt.CORE)
+    kapt(Dependency.Hilt.COMPILER)
 }
 
 kapt {

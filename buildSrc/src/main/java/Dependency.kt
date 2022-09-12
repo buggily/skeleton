@@ -8,6 +8,7 @@ object Dependency {
 
     object Hilt {
         const val IDENTITY = "com.google.dagger:hilt-android:${Version.Hilt.IDENTITY}"
+        const val CORE = "com.google.dagger:hilt-core:${Version.Hilt.IDENTITY}"
         const val COMPILER = "com.google.dagger:hilt-android-compiler:${Version.Hilt.IDENTITY}"
 
         object Android {

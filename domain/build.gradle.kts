@@ -11,7 +11,10 @@ java {
 }
 
 dependencies {
+    implementation(project(":data"))
 
+    implementation(Dependency.Hilt.CORE)
+    kapt(Dependency.Hilt.COMPILER)
 }
 
 kapt {
