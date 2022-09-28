@@ -8,6 +8,7 @@ import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.buggily.skeleton.ui.theme.SkeletonTheme
@@ -29,14 +30,16 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val isLight: Boolean = !isSystemInDarkTheme()
-            val colorScheme: ColorScheme = if (isLight) {
-                dynamicLightColorScheme(this)
-            } else {
-                dynamicDarkColorScheme(this)
+            val colorScheme: ColorScheme = remember(isLight) {
+                if (isLight) {
+                    dynamicLightColorScheme(this)
+                } else {
+                    dynamicDarkColorScheme(this)
+                }
             }
 
             LaunchedEffect(isLight) {
-                insetsController.run {
+                with(insetsController) {
                     isAppearanceLightStatusBars = isLight
                     isAppearanceLightNavigationBars = isLight
                 }

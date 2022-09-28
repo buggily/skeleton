@@ -21,13 +21,13 @@ object Version {
     }
 
     object Room {
-        const val IDENTITY = "2.4.2"
-        const val PAGING = "2.5.0-alpha02"
+        const val IDENTITY = "2.4.3"
+        const val PAGING = "2.4.3"
     }
 
     object Paging {
         const val IDENTITY = "3.1.1"
-        const val COMPOSE = "1.0.0-alpha15"
+        const val COMPOSE = "1.0.0-alpha16"
     }
 
     object Retrofit {
@@ -41,15 +41,15 @@ object Version {
 
     object Compose {
 
-        const val IDENTITY = "1.3.0-alpha01"
+        const val IDENTITY = "1.2.1"
         const val COMPILER = "1.2.0"
-        const val ACTIVITY = "1.6.0-alpha05"
-        const val MATERIAL = "1.0.0-alpha16"
-        const val LIFECYCLE = "2.6.0-alpha01"
-        const val NAVIGATION = "2.5.0"
+        const val ACTIVITY = "1.6.0"
+        const val MATERIAL = "1.0.0-beta03"
+        const val LIFECYCLE = "2.6.0-alpha02"
+        const val NAVIGATION = "2.5.2"
 
         object Tooling {
-            const val IDENTITY = "1.1.1"
+            const val IDENTITY = "1.2.1"
         }
     }
 
