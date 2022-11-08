@@ -1,7 +1,7 @@
 package com.buggily.skeleton.ui.home
 
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 
-class HomeViewModel : ViewModel() {
-
-}
+@HiltViewModel
+class HomeViewModel : ViewModel()
