@@ -8,7 +8,7 @@ object Version {
     val JAVA: JavaVersion = JavaVersion.VERSION_1_8
 
     object Kotlin {
-        const val CORE = "1.8.0"
+        const val CORE = "1.9.0"
     }
 
     object Hilt {
@@ -27,7 +27,7 @@ object Version {
 
     object Paging {
         const val IDENTITY = "3.1.1"
-        const val COMPOSE = "1.0.0-alpha16"
+        const val COMPOSE = "1.0.0-alpha17"
     }
 
     object Retrofit {
@@ -36,21 +36,17 @@ object Version {
     }
 
     object Serialization {
-        const val IDENTITY = "1.4.0-RC"
+        const val IDENTITY = "1.4.1"
     }
 
     object Compose {
 
-        const val IDENTITY = "1.2.1"
+        const val IDENTITY = "1.3.0"
         const val COMPILER = "1.2.0"
-        const val ACTIVITY = "1.6.0"
-        const val MATERIAL = "1.0.0-beta03"
-        const val LIFECYCLE = "2.6.0-alpha02"
-        const val NAVIGATION = "2.5.2"
-
-        object Tooling {
-            const val IDENTITY = "1.2.1"
-        }
+        const val ACTIVITY = "1.6.1"
+        const val MATERIAL = "1.0.0"
+        const val LIFECYCLE = "2.6.0-alpha03"
+        const val NAVIGATION = "2.5.3"
     }
 
     object Coil {

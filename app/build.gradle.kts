@@ -9,6 +9,7 @@ plugins {
 
 android {
 
+    namespace = Build.NAMESPACE
     compileSdk = Build.Sdk.COMPILE
 
     defaultConfig {

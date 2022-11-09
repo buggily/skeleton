@@ -56,8 +56,8 @@ object Dependency {
             const val IDENTITY = "androidx.compose.ui:ui:${Version.Compose.IDENTITY}"
 
             object Tooling {
-                const val IDENTITY =  "androidx.compose.ui:ui-tooling:${Version.Compose.Tooling.IDENTITY}"
-                const val PREVIEW = "androidx.compose.ui:ui-tooling-preview:${Version.Compose.Tooling.IDENTITY}"
+                const val IDENTITY =  "androidx.compose.ui:ui-tooling:${Version.Compose.IDENTITY}"
+                const val PREVIEW = "androidx.compose.ui:ui-tooling-preview:${Version.Compose.IDENTITY}"
             }
         }
 

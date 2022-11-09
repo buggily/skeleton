@@ -1,6 +1,8 @@
 object Build {
 
-    const val ID = "com.buggily.skeleton"
+    const val NAMESPACE = "com.buggily.skeleton"
+    const val ID = NAMESPACE
+
     const val RUNNER = "androidx.test.runner.AndroidJUnitRunner"
 
     object Sdk {
