@@ -1,27 +1,20 @@
 plugins {
-    id("com.android.application")
-
-    kotlin("android")
-    kotlin("kapt")
-
-    id("dagger.hilt.android.plugin")
+    id("skeleton.android.application")
+    id("skeleton.android.application.compose")
+    id("skeleton.android.hilt")
 }
 
 android {
 
-    namespace = Build.NAMESPACE
-    compileSdk = Build.Sdk.COMPILE
+    namespace = "com.buggily.skeleton"
 
     defaultConfig {
-        applicationId = Build.ID
+        applicationId = namespace
 
-        minSdk = Build.Sdk.MIN
-        targetSdk = Build.Sdk.TARGET
+        versionCode = 1
+        versionName = "1.0.0"
 
-        versionCode = Version.CODE
-        versionName = Version.NAME
-
-        testInstrumentationRunner = Build.RUNNER
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -36,72 +29,24 @@ android {
         }
     }
 
-    buildFeatures {
-        compose = true
-    }
-
-    hilt {
-        enableAggregatingTask = true
-    }
-
-    compileOptions {
-        sourceCompatibility = Version.JAVA
-        targetCompatibility = Version.JAVA
-    }
-
-    kotlinOptions {
-        jvmTarget = Version.JAVA.toString()
-
-        val optIns: List<String> = listOf(
-            String(),
-        ).map {
-            "-opt-in=$it"
+    packagingOptions {
+        resources {
+            excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
-
-        freeCompilerArgs = freeCompilerArgs + optIns
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = Version.Compose.COMPILER
     }
 }
 
 dependencies {
-    implementation(Dependency.Kotlin.Core.KTX)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
-    implementation(Dependency.Hilt.IDENTITY)
-    kapt(Dependency.Hilt.COMPILER)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.core.splashscreen)
 
-    implementation(Dependency.Hilt.Android.NAVIGATION)
-    kapt(Dependency.Hilt.Android.COMPILER)
+    implementation(libs.androidx.compose)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material3.windowSizeClass)
 
-    implementation(Dependency.Room.IDENTITY)
-    kapt(Dependency.Room.COMPILER)
-
-    implementation(Dependency.Room.COROUTINES)
-    implementation(Dependency.Room.PAGING)
-
-    implementation(Dependency.Paging.IDENTITY)
-    implementation(Dependency.Paging.COMPOSE)
-
-    implementation(Dependency.Retrofit.IDENTITY)
-
-    implementation(Dependency.Compose.ACTIVITY)
-    implementation(Dependency.Compose.MATERIAL)
-    implementation(Dependency.Compose.NAVIGATION)
-
-    implementation(Dependency.Compose.Ui.IDENTITY)
-    implementation(Dependency.Compose.Ui.Tooling.PREVIEW)
-    debugImplementation(Dependency.Compose.Ui.Tooling.IDENTITY)
-
-    implementation(Dependency.Compose.Lifecycle.IDENTITY)
-    implementation(Dependency.Compose.Lifecycle.KTX)
-    implementation(Dependency.Compose.Lifecycle.ViewModel.IDENTITY)
-    implementation(Dependency.Compose.Lifecycle.ViewModel.KTX)
-
-    implementation(Dependency.Coil.IDENTITY)
-}
-
-kapt {
-    correctErrorTypes = true
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
 }
