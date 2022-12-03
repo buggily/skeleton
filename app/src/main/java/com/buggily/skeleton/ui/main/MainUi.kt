@@ -21,7 +21,7 @@ fun MainScreen() {
             arguments = emptyList(),
             deepLinks = emptyList(),
         ) {
-            HomeScreen()
+            HomeScreen(Modifier.fillMaxSize())
         }
     }
 }
