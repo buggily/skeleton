@@ -37,6 +37,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.kotlin)
+    implementation(libs.kotlinx.coroutines.android)
+
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
 
