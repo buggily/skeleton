@@ -1,8 +1,11 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.buggily.skeleton.configureAndroidCompose
+import ext.getLib
+import ext.getLibs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType
+import org.gradle.kotlin.dsl.dependencies
 
 class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
 
@@ -13,5 +16,21 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
 
         val extension: ApplicationExtension = extensions.getByType()
         configureAndroidCompose(extension)
+
+        dependencies {
+            with(getLibs()) {
+                add("implementation", platform(getLib("androidx-compose-bom")))
+                add("implementation", getLib("androidx.activity.compose"))
+                add("implementation", getLib("androidx.compose.material3"))
+                add("implementation", getLib("androidx.compose.material3.windowSizeClass"))
+
+                add("implementation", getLib("androidx.navigation.compose"))
+                add("implementation", getLib("androidx.hilt.navigation.compose"))
+
+                add("implementation", getLib("androidx.lifecycle.viewModel.ktx"))
+                add("implementation", getLib("androidx.lifecycle.viewModel.compose"))
+                add("implementation", getLib("androidx.lifecycle.runtime.compose"))
+            }
+        }
     }
 }
