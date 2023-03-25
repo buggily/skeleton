@@ -16,8 +16,10 @@ class AndroidHiltConventionPlugin : Plugin<Project> {
         val libs: VersionCatalog = getLibs()
 
         dependencies {
-            add("implementation", libs.getLib("hilt.android"))
-            add("kapt", libs.getLib("hilt.android.compiler"))
+            with(getLibs()) {
+                add("implementation", getLib("hilt.android"))
+                add("kapt", getLib("hilt.android.compiler"))
+            }
         }
     }
 }
