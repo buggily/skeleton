@@ -13,8 +13,6 @@ class AndroidHiltConventionPlugin : Plugin<Project> {
             apply("dagger.hilt.android.plugin")
         }
 
-        val libs: VersionCatalog = getLibs()
-
         dependencies {
             with(getLibs()) {
                 add("implementation", getLib("hilt.android"))
