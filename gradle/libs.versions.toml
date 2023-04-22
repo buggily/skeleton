@@ -15,7 +15,7 @@ googleDagger = "2.45"
 kotlin = "1.8.10"
 kotlinxCoroutines = "1.6.4"
 
-androidGradlePlugin = "7.4.2"
+androidGradlePlugin = "8.0.0"
 
 [libraries]
 
