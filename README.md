@@ -10,4 +10,4 @@ skeleton is not a standalone application.
 
 ### Overview
 
-skeleton renders a single screen
+skeleton renders a single screen.
