@@ -2,20 +2,20 @@
 
 androidx = "1.9.0"
 androidxActivity = "1.6.1"
-androidxComposeBom = "2023.01.00"
-androidxComposeCompiler = "1.4.3"
-androidxComposeNavigation = "2.5.3"
+androidxComposeBom = "2023.06.01"
+androidxComposeCompiler = "1.5.1"
+androidxComposeNavigation = "2.6.0"
 androidxHilt = "1.0.0"
-androidxSplashscreen = "1.0.0"
-androidxLifecycle = "2.6.0"
-androidxWindowManager = "1.0.1"
+androidxSplashscreen = "1.0.1"
+androidxLifecycle = "2.6.1"
+androidxWindowManager = "1.1.1"
 
-googleDagger = "2.45"
+googleDagger = "2.47"
 
-kotlin = "1.8.10"
-kotlinxCoroutines = "1.6.4"
+kotlin = "1.9.0"
+kotlinxCoroutines = "1.7.1"
 
-androidGradlePlugin = "8.0.0"
+androidGradlePlugin = "8.0.2"
 
 [libraries]
 
