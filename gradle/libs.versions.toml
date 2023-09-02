@@ -8,7 +8,6 @@ androidxComposeNavigation = "2.7.1"
 androidxHilt = "1.0.0"
 androidxSplashscreen = "1.0.1"
 androidxLifecycle = "2.6.1"
-androidxWindowManager = "1.1.1"
 
 googleDagger = "2.48"
 
@@ -30,12 +29,12 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxComposeNavigation" }
 
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidx" }
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "androidxSplashscreen" }
 
-androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
-androidx-lifecycle-viewModel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewModel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidxLifecycle" }
 androidx-lifecycle-viewModel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
 
 hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "googleDagger" }
 hilt-core-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "googleDagger" }

@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage")
-
 plugins {
     id("skeleton.android.application")
     id("skeleton.android.application.compose")
@@ -43,7 +41,9 @@ dependencies {
         implementation(kotlin)
         implementation(kotlinx.coroutines.android)
 
-        implementation(androidx.core.ktx)
+        implementation(androidx.core)
         implementation(androidx.core.splashscreen)
+
+        implementation(androidx.lifecycle.viewModel)
     }
 }
