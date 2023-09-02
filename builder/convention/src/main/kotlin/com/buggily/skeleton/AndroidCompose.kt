@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage")
-
 package com.buggily.skeleton
 
 import com.android.build.api.dsl.CommonExtension
