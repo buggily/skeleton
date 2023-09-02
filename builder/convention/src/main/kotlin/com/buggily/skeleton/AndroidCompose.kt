@@ -8,10 +8,10 @@ import ext.getVersion
 import org.gradle.api.Project
 
 internal fun Project.configureAndroidCompose(
-    commonExtension: CommonExtension<*, *, *, *>,
+    commonExtension: CommonExtension<*, *, *, *, *>,
 ) = with(commonExtension) {
 
-    compileSdk = 33
+    compileSdk = 34
 
     buildFeatures {
         compose = true
