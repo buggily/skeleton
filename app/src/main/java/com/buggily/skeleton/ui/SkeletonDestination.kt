@@ -1,12 +1,10 @@
 package com.buggily.skeleton.ui
 
-sealed class SkeletonDestination {
+sealed interface SkeletonDestination {
 
-    abstract val route: String
+    val route: String
 
-    object Home : SkeletonDestination() {
-
-        override val route: String
-            get() = "home"
+    data object Home : SkeletonDestination {
+        override val route: String = "home"
     }
 }
