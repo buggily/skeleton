@@ -1,6 +1,12 @@
 package com.buggily.skeleton.ui.main
 
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.ime
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -11,24 +17,33 @@ import com.buggily.skeleton.ui.SkeletonDestination
 import com.buggily.skeleton.ui.home.HomeScreen
 
 @Composable
+@OptIn(ExperimentalLayoutApi::class)
 fun MainScreen(
     viewModel: MainViewModel,
     modifier: Modifier = Modifier,
 ) {
-    NavHost(
-        navController = rememberNavController(),
-        startDestination = SkeletonDestination.Home.route,
+    Scaffold(
+        contentWindowInsets = WindowInsets.ime,
         modifier = modifier,
     ) {
-        composable(
-            route = SkeletonDestination.Home.route,
-            arguments = emptyList(),
-            deepLinks = emptyList(),
+        NavHost(
+            navController = rememberNavController(),
+            startDestination = SkeletonDestination.Home.route,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(it)
+                .consumeWindowInsets(it),
         ) {
-            HomeScreen(
-                viewModel = hiltViewModel(),
-                modifier = Modifier.fillMaxSize(),
-            )
+            composable(
+                route = SkeletonDestination.Home.route,
+                arguments = emptyList(),
+                deepLinks = emptyList(),
+            ) {
+                HomeScreen(
+                    viewModel = hiltViewModel(),
+                    modifier = Modifier.fillMaxSize(),
+                )
+            }
         }
     }
 }
