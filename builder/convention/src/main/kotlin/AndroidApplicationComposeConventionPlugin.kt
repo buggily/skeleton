@@ -22,6 +22,7 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
             with(getLibs()) {
                 add("implementation", platform(getLib("androidx-compose-bom")))
                 add("implementation", getLib("androidx.activity.compose"))
+
                 add("implementation", getLib("androidx.compose.material3"))
                 add("implementation", getLib("androidx.compose.material3.windowSizeClass"))
 

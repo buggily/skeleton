@@ -39,6 +39,7 @@ android {
 dependencies {
     with(libs) {
         implementation(kotlin)
+        implementation(kotlinx.coroutines)
         implementation(kotlinx.coroutines.android)
 
         implementation(androidx.core)
