@@ -1,4 +1,4 @@
-package com.buggily.skeleton.ui.main
+package com.buggily.skeleton.ui
 
 import android.content.res.Configuration
 import android.os.Build
@@ -8,7 +8,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.ColorScheme
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.core.content.ContextCompat
@@ -23,7 +22,7 @@ import com.buggily.skeleton.ui.theme.lightColorSchemeCompat
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
+class SkeletonActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -43,7 +42,7 @@ class MainActivity : ComponentActivity() {
             }
 
             SkeletonTheme(colorScheme) {
-                MainScreen(
+                SkeletonApp(
                     viewModel = hiltViewModel(),
                     modifier = Modifier.fillMaxSize(),
                 )
