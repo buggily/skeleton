@@ -19,7 +19,6 @@ import androidx.navigation.compose.rememberNavController
 import com.buggily.skeleton.R
 
 @Composable
-@OptIn(ExperimentalLayoutApi::class)
 fun SkeletonApp(
     viewModel: SkeletonViewModel,
     modifier: Modifier = Modifier,
